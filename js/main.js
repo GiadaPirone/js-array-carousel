@@ -9,11 +9,17 @@ console.log(listaSlide);
 let  btnAvanti = document.getElementById("btnNext");
 let btnIndietro = document.getElementById("btnBack");
 
-//inserita img da js
-let immagini = document.createElement("img");
-immagini.src = "./img/03.webp";
-document.getElementById("boxSlide").append(immagini);
-immagini.className = "slide dNone";
+let immagini = ["./img/01.webp", "./img/02.webp","./img/03.webp","./img/04.webp","./img/05.webp"]
+
+
+for (let c = 0; c < immagini.length; c++) {
+    const a = immagini[c];
+    let immagine = document.createElement("img");
+    immagine.src = a;
+    document.getElementById("boxSlide").append(immagine);
+    immagine.className = "slide dNone";
+
+}
 
 // variabile di appoggio
 let slideCorrente = 0;
