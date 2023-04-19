@@ -1,0 +1,31 @@
+body{
+    color: white;
+}
+
+#container{
+    height: 100vh;
+    background: black;
+    color: white;
+    position: relative;
+}
+
+#boxSlide{
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+}
+
+.slide{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dNone{
+    display: none;
+}
