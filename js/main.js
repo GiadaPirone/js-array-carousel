@@ -19,15 +19,17 @@ for (let c = 0; c < immagini.length; c++) {
     document.getElementById("boxSlide").append(immagine);
     immagine.className = "slide dNone";
 
+    if ( c == 0){
+        immagine.classList.remove("dNone");
+    }
 }
 
 // variabile di appoggio
 let slideCorrente = 0;
 
 btnAvanti.addEventListener("click", function(){
-
     if( slideCorrente < 4){
-
+        
         for (let c = 0; c < listaSlide.length; c++) {
     
             let slideIncrementata = listaSlide[c];
@@ -43,7 +45,10 @@ btnAvanti.addEventListener("click", function(){
     
         slideCorrente++;
     } else{
+
         console.log("non va piu avanti di cosi");
+        document.getElementById("btnBack").style.display = "block";
+        document.getElementById("btnNext").style.display = "none";
     }
 
 })
@@ -51,6 +56,7 @@ btnAvanti.addEventListener("click", function(){
 btnIndietro.addEventListener("click", function(){
 
     if ( slideCorrente >0 ){
+       
         for (let c = 0; c < listaSlide.length; c++) {
     
             let slideIncrementata = listaSlide[c];
@@ -67,6 +73,8 @@ btnIndietro.addEventListener("click", function(){
         slideCorrente--;
     } else{
         console.log("non va piu indietro adi cosi");
+        document.getElementById("btnBack").style.display = "none";
+        document.getElementById("btnNext").style.display = "block";
     }
 
 
